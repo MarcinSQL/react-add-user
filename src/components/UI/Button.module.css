@@ -1,0 +1,20 @@
+.button {
+  width: auto;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  background-color: #2b2d42;
+  color: #FDFFFC;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #80a1d4;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 100%;
+  }
+}

@@ -10,7 +10,7 @@ const FormInputs = () => {
             <label> Age (Years)
                 <input type="number" min={1}/>
             </label>
-            <Button>Add user</Button>
+            <Button type="submit">Add user</Button>
         </form>
     );
 }

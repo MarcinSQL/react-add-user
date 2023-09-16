@@ -3,4 +3,12 @@
     box-shadow: 5px 5px 5px #919191;
     border-radius: 16px;
     padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }

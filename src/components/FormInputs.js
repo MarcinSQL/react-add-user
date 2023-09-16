@@ -1,8 +1,9 @@
 import Button from "./UI/Button";
+import classes from "./FormInputs.module.css";
 
 const FormInputs = () => {
     return (
-        <form>
+        <form className={classes.form}>
             <label> Username
                 <input type="text" />
             </label>

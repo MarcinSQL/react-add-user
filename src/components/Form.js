@@ -1,10 +1,10 @@
 import FormInputs from "./FormInputs";
 import Card from "./UI/Card";
 
-const Form = () => {
+const Form = (props) => {
     return (
         <Card>
-            <FormInputs />
+            <FormInputs enteredData={props.userInputs}/>
         </Card>
     );
 }

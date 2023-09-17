@@ -1,14 +1,40 @@
+import React, { useState } from "react";
 import Button from "./UI/Button";
 import classes from "./FormInputs.module.css";
 
-const FormInputs = () => {
+const FormInputs = (props) => {
+    const [username, setUsername] = useState("");
+    const [age, setAge] = useState("");
+
+    const usernameChangeHandler = (e) => {
+        setUsername(e.target.value);
+    }
+
+    const ageChangeHandler = (e) => {
+        setAge(e.target.value);
+    }
+
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+
+        const userData = {
+            username: username,
+            age: age
+        }
+        
+        props.enteredData(userData);
+
+        setUsername("");
+        setAge("");
+    }
+
     return (
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={onSubmitHandler}>
             <label> Username
-                <input type="text" />
+                <input type="text" value={username} onChange={usernameChangeHandler} />
             </label>
             <label> Age (Years)
-                <input type="number" min={1}/>
+                <input type="number" value={age} onChange={ageChangeHandler} min={1}/>
             </label>
             <Button type="submit">Add user</Button>
         </form>

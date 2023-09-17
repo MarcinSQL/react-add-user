@@ -5,11 +5,15 @@ import Results from "./components/Results";
 function App() {
   const [enteredData, setEnteredData] = useState([]);
   const userData = (userInputs) => {
+    userInputs = {
+      ...userInputs,
+      id: Math.random()
+    }
     setEnteredData((prevUserInputs) => {
       return [userInputs, ...prevUserInputs];
     });
   };
-  
+
   return (
     <div>
       <Form userInputs={userData} />

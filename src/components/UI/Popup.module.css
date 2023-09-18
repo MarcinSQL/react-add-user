@@ -1,0 +1,33 @@
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.popup_content{
+    background-color: #fff;
+    margin: 15rem auto;
+    padding: 20px;
+    width: 60vw;
+    border-radius: 16px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .popup_content {
+        width: 80vw;
+    }
+  }
+
+.popup_content h1{
+    border-bottom: 2px solid #595D88;
+    padding: 0 0 2rem 0;
+    width: 90%;
+    margin: 2rem auto;
+}

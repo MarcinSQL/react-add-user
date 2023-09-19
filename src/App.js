@@ -22,16 +22,24 @@ function App() {
     else if (value === false) setPopupDisplay(false);
   };
 
-  console.log(popupDisplay);
+  const exitPopup = (value) => {
+    if (value) {
+      setPopupDisplay(false);
+    }
+  };
 
   return (
     <div>
       <Form userInputs={userData} isValidate={isValidate} />
       <Results userInputs={enteredData} />
-      {popupDisplay === true ? <Popup>
-        <h1>Something is wrong with your data</h1>
-        <p>Please enter some others values.</p>
-      </Popup> : ""}
+      {popupDisplay === true ? (
+        <Popup exit={exitPopup}>
+          <h1>Something is wrong with your data</h1>
+          <p>Please enter some others values.</p>
+        </Popup>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

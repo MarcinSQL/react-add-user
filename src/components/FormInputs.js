@@ -25,7 +25,7 @@ const FormInputs = (props) => {
 
     if (userData.age >= 150) {
       setIsValidate(true);
-      return props.isValidate(isValidate), setUsername(""), setAge("");
+      return props.isValidate(true), setUsername(""), setAge("");
     } else {
       setIsValidate(false);
       props.enteredData(userData);

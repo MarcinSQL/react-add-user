@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-add-user/static/css/main.d1c936c4.css",
+    "main.js": "/react-add-user/static/js/main.2039abe1.js",
+    "index.html": "/react-add-user/index.html",
+    "main.d1c936c4.css.map": "/react-add-user/static/css/main.d1c936c4.css.map",
+    "main.2039abe1.js.map": "/react-add-user/static/js/main.2039abe1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1c936c4.css",
+    "static/js/main.2039abe1.js"
+  ]
+}

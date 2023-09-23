@@ -1,49 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "./UI/Button";
 import classes from "./FormInputs.module.css";
 
 const FormInputs = (props) => {
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState("");
+  const nameInputRef = useRef("");
+  const ageInputRef = useRef("");
+
   const [isValidate, setIsValidate] = useState(true);
-
-  const usernameChangeHandler = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const ageChangeHandler = (e) => {
-    setAge(e.target.value);
-  };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
     const userData = {
-      username: username,
-      age: age,
+      username: nameInputRef.current.value,
+      age: ageInputRef.current.value,
     };
 
     if (userData.age >= 150 || userData.username === "" || userData.age === "") {
-      setIsValidate(true);
-      return props.isValidate(true), setUsername(""), setAge("");
+      return props.isValidate(true);
     } else {
       setIsValidate(false);
       props.enteredData(userData);
     }
 
-    setUsername("");
-    setAge("");
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
   };
 
   return (
     <form className={classes.form} onSubmit={onSubmitHandler}>
       <label>
         Username
-        <input type="text" value={username} onChange={usernameChangeHandler} />
+        <input type="text" ref={nameInputRef}/>
       </label>
       <label>
         Age (Years)
-        <input type="number" value={age} onChange={ageChangeHandler} min={1} />
+        <input type="number" min={1} ref={ageInputRef}/>
       </label>
       <Button type="submit">Add user</Button>
     </form>

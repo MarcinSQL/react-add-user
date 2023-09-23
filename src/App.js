@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "./components/Form";
 import Results from "./components/Results";
 import Popup from "./components/UI/Popup";
+import Wrapper from "./components/Helpers/Wrapper";
 
 function App() {
   const [enteredData, setEnteredData] = useState([]);
@@ -29,7 +30,7 @@ function App() {
   };
 
   return (
-    <div>
+    <Wrapper>
       <Form userInputs={userData} isValidate={isValidate} />
       <Results userInputs={enteredData} />
       {popupDisplay === true ? (
@@ -40,7 +41,7 @@ function App() {
       ) : (
         ""
       )}
-    </div>
+    </Wrapper>
   );
 }
 

@@ -1,21 +1,23 @@
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
 }
 
 .modal__content {
-  position: relative;
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
   background-color: #fff;
-  margin: 15rem auto;
   padding: 1rem;
-  width: 60vw;
   border-radius: 16px;
   text-align: center;
 }

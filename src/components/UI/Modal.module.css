@@ -1,4 +1,4 @@
-.popup {
+.modal {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
 }
 
-.popup__content {
+.modal__content {
   position: relative;
   background-color: #fff;
   margin: 15rem auto;
@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.popup__exit {
+.modal__exit {
   position: absolute;
   cursor: pointer;
   border: none;
@@ -32,17 +32,17 @@
   transition: color 0.3s ease-in-out;
 }
 
-.popup__exit:hover {
+.modal__exit:hover {
   color: #595d88;
 }
 
 @media (max-width: 768px) {
-  .popup__content {
+  .modal__content {
     width: 80vw;
   }
 }
 
-.popup__content h1 {
+.modal__content h1 {
   border-bottom: 2px solid #595d88;
   padding: 0 0 1rem 0;
   width: 90%;
